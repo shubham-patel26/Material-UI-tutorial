@@ -1,9 +1,11 @@
-import { AppBar, Badge, Grid, IconButton, InputBase, makeStyles, Toolbar } from '@material-ui/core'
+import { AppBar, Badge, createMuiTheme, Grid, IconButton, InputBase, makeStyles, Toolbar } from '@material-ui/core'
 import React from 'react'
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import SearchIcon from '@material-ui/icons/Search';
+
+
 const useStyles = makeStyles({
     root:{
         backgroundColor: "#FFF",
@@ -20,13 +22,7 @@ const useStyles = makeStyles({
         }
 
     },
-    btnRoot:{
-        backgroundColor:"green",
-    },
-
-    btnLabel:{
-        backgroundColor:"red",
-    }
+    
 })
 
 export default function Header() {
@@ -47,8 +43,8 @@ export default function Header() {
 
                     </Grid>
                     <Grid item  >
-                        <IconButton classes={{root: classes.btnRoot, label: classes.btnLabel }}>
-                            <Badge badgeContent={4} color="secondary" >
+                        <IconButton >
+                            <Badge badgeContent={4} color="secondary " >
                                 <NotificationsActiveIcon fontsize="small"/>
                             </Badge>
                         </IconButton>
