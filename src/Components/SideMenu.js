@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles, withStyles} from '@material-ui/core';
 
-const useStyles = makeStyles({
+const Styles = {
     sideMenu: {
         display: 'flex',
         flexDirection:'column',
@@ -12,10 +12,10 @@ const useStyles = makeStyles({
         backgroundColor: '#253053'
         
     }
-});
+};
 
-export default function SideMenu() {
-    const classes = useStyles();
+const SideMenu = (props)=> {
+    const {classes} = props
     console.log(classes);
     return (
         <div className={classes.sideMenu}>
@@ -23,3 +23,6 @@ export default function SideMenu() {
         </div>
     )
 }
+
+export default withStyles(Styles)(SideMenu); // higher order functions
+ 
