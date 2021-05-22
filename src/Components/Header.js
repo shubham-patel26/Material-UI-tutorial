@@ -19,6 +19,13 @@ const useStyles = makeStyles({
             marginRight: '8px',
         }
 
+    },
+    btnRoot:{
+        backgroundColor:"green",
+    },
+
+    btnLabel:{
+        backgroundColor:"red",
     }
 })
 
@@ -40,7 +47,7 @@ export default function Header() {
 
                     </Grid>
                     <Grid item  >
-                        <IconButton>
+                        <IconButton classes={{root: classes.btnRoot, label: classes.btnLabel }}>
                             <Badge badgeContent={4} color="secondary" >
                                 <NotificationsActiveIcon fontsize="small"/>
                             </Badge>
